@@ -20,6 +20,11 @@ import { FormsComponent } from './components/forms/forms.component';
 import { DirectivesAttributeComponent } from './components/directives-attribute/directives-attribute.component';
 import { DirectivesStructuralComponent } from './components/directives-structural/directives-structural.component';
 import { DirectivesComponentsComponent } from './components/directives-components/directives-components.component';
+import { NgxsComponent } from './components/ngxs/ngxs.component';
+import { HttpClientModule } from '@angular/common/http'
+
+import { NgxsModule } from '@ngxs/store';
+import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
 
 @NgModule({
   declarations: [
@@ -35,6 +40,7 @@ import { DirectivesComponentsComponent } from './components/directives-component
     DirectivesAttributeComponent,
     DirectivesStructuralComponent,
     DirectivesComponentsComponent,
+    NgxsComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +50,9 @@ import { DirectivesComponentsComponent } from './components/directives-component
     MatIconModule,
     MatButtonModule,
     FormsModule,
+    HttpClientModule,
+    NgxsModule.forRoot([]),
+    true  ? [] : NgxsReduxDevtoolsPluginModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

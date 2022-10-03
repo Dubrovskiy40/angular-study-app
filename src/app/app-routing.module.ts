@@ -8,6 +8,7 @@ import { ServicesComponent } from './components/services/services.component';
 import {DirectivesAttributeComponent} from "./components/directives-attribute/directives-attribute.component";
 import {DirectivesStructuralComponent} from "./components/directives-structural/directives-structural.component";
 import {DirectivesComponentsComponent} from "./components/directives-components/directives-components.component";
+import {NgxsComponent} from "./components/ngxs/ngxs.component";
 
 const directivesRoutes: Routes = [
   {path: 'directives/components', component: DirectivesComponentsComponent},
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path: 'directives', component: DirectivesComponent, children: directivesRoutes},
   {path: 'services', component: ServicesComponent},
   {path: 'forms', component: FormsComponent},
+  {path: 'ngxs', component: NgxsComponent},
   {path: '**', redirectTo: '', component: MainComponent} //{ path: '**', redirectTo: '/'}
 ];
 

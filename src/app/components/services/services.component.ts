@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "../../data.service";
 
 @Component({
   selector: 'app-services',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent implements OnInit {
+  _items: string[] = [];
+  name: string = "";
+  constructor(private _dataService: DataService){}
 
-  constructor() { }
-
-  ngOnInit(): void {
+  addItem(name: string){
+    this._dataService.addData(name);
+    this.name = '';
   }
 
+  get items(): string[] {
+    return this._items = this._dataService.getData();
+  }
+
+  ngOnInit(){
+    this.items
+  }
 }
