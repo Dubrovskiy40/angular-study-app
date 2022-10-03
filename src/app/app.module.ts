@@ -17,6 +17,9 @@ import {FormsModule} from "@angular/forms";
 import { DirectivesComponent } from './components/directives/directives.component';
 import { ServicesComponent } from './components/services/services.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { DirectivesAttributeComponent } from './components/directives-attribute/directives-attribute.component';
+import { DirectivesStructuralComponent } from './components/directives-structural/directives-structural.component';
+import { DirectivesComponentsComponent } from './components/directives-components/directives-components.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { FormsComponent } from './components/forms/forms.component';
     DirectivesComponent,
     ServicesComponent,
     FormsComponent,
+    DirectivesAttributeComponent,
+    DirectivesStructuralComponent,
+    DirectivesComponentsComponent,
   ],
   imports: [
     BrowserModule,

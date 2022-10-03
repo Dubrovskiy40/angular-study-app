@@ -1,0 +1,21 @@
+<h2>ngIf</h2>
+<p>Директива <b>ngIf</b> позволяет удалить или, наоборот, добавить элемент при определенном условии. Например,
+  определим следующий компонент:</p>
+<p *ngIf="condition">Привет мир</p>
+<p *ngIf="!condition">Пока мир</p>
+<button (click)="toggle()">Toggle</button>
+
+<h2>ngFor</h2>
+<p>Директива <b>ngFor</b> позволяет перебрать в шаблоне элементы массива.</p>
+<ul>
+  <li *ngFor="let item of items" (click)="changeColor($event)" [title]="item">{{item}}</li>
+</ul>
+
+<h2>ngSwitch</h2>
+<p>С помощью директивы <b>ngSwitch</b> можно встроить в шаблон конструкцию switch..case и в зависимости от ее результата
+  выполнения выводить тот или иной блок</p>
+<div [ngSwitch]="count">
+  <ng-template ngSwitchCase="1">{{count * 10}}</ng-template>
+  <ng-template ngSwitchCase="2">{{count * 100}}</ng-template>
+  <ng-template ngSwitchDefault>{{count * 1000}}</ng-template>
+</div>
