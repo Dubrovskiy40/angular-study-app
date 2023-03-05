@@ -1,1 +1,9 @@
-<p>directives works!</p>
+<h1>Структурные директивы ngIf, ngFor, ngSwitch</h1>
+<ol>
+  <li>
+    Директива ngIf позволяет удалить или, наоборот, добавить элемент при определенном условии
+    <p *ngIf="condition">Привет мир</p>
+    <p *ngIf="!condition">Пока мир</p>
+    <button (click)="toggle()">Toggle</button>
+  </li>
+</ol>
